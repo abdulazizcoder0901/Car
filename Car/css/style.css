@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.city {
+  height: 100vh;
+  width: 500%;
+  display: block;
+  background-image: url(../Images/picture.jpg);
+  position: absolute;
+  background-size: contain;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: city 3s linear infinite;
+}
+
+.car {
+  width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 280px;
+  z-index: 2;
+}
+.car img {
+  width: 100%;
+  animation: car 3s linear infinite;
+}
+
+.wheel {
+  left: 50%;
+  bottom: 195px;
+  position: absolute;
+  z-index: 2;
+}
+.wheel img {
+  width: 46px;
+  height: 46px;
+  animation: wheel 0.2s linear infinite;
+}
+.back-wheel {
+  left: -97px;
+  position: absolute;
+}
+.front-wheel {
+  left: 62px;
+  position: absolute;
+}
+
+@keyframes city {
+  100% {
+    transform: translateX(-3500px);
+  }
+}
+
+@keyframes car{
+  0%{
+    transform: translateY(-1px);
+  }
+
+  50%{
+    transform: translateY(1px);
+  }
+
+  100%{
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes wheel{
+  100%{
+    transform: rotate(360deg);
+  }
+}
